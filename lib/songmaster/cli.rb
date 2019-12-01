@@ -1,6 +1,0 @@
-
-
-Class Songmaster::CLI
-
-
-end 

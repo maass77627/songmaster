@@ -12,6 +12,7 @@ class Songmaster::CLI
   def list_songs 
     puts "songs "
     puts "Spotifys top 50 songs" 
+  @songs = Songmaster::Songs 
   end 
   
   def choose

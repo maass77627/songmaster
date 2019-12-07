@@ -1,4 +1,5 @@
 require 'rspotify'
+require 'pry'
 
 RSpotify.authenticate("9e567e0913194ddc9ef2b0a550329fda", "0b27624d80e24b90978685a63c564433")
 
@@ -13,13 +14,8 @@ class API
     artists
   end 
   
-  def self.get_albums(artist_name)
-    API.find_artist(artist_name)
-    albums = (artist_name).albums
-    albums.first.name
-  end 
 
-  def self.get_albu(rspotify_artist)
+  def self.get_album(rspotify_artist)
     result = Array.new
     for album in rspotify_artist.albums
       result.push(album.name)

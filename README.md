@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/songmaster`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+Welcome to Songmaster!! This is a CLI based gem that gathers information about artists from Spotify and allows the user to request more information for a specific artist of their choosing. The user can get a list of any artist’s current albums and can request to see tracks from any album they choose. Getting Started
 
 ## Installation
 

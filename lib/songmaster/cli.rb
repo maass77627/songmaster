@@ -13,7 +13,7 @@ class Songmaster::CLI
     puts ""
     puts "Enter the name of an artist you would like to see albums for, or type exit." 
    input = gets.strip 
-   Artist.print_albums(input)
+   API.get_albums(input)
   end 
   
   def choose
@@ -26,6 +26,7 @@ class Songmaster::CLI
         def goodbye 
          puts "Thanks for checking out Songmaster!
           See you next time!"
+          API.get_artist(Usher)
         end 
 
 

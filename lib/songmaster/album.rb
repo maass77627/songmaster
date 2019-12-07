@@ -13,7 +13,7 @@ class Songmaster::Album
     @@all
   end 
   
-  
+ 
   
   
   

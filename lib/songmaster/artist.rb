@@ -1,4 +1,6 @@
-class Songmaster::Artist 
+require 'pry'
+
+class Artist 
   
   attr_accessor :name, :albums, :tracks
   
@@ -6,7 +8,6 @@ class Songmaster::Artist
  
   def initialize(name)
     @name = name 
-    @@all << self
     @albums = []
   end 
   
@@ -15,7 +16,30 @@ class Songmaster::Artist
   end 
   
   def self.create(name)
-    API.get_artist(name)
+    Artist.name = self
+    @@all << self
   end 
   
+  
+  def self.new_from_api(artist_name)
+    API.find_artist(artist_name)
+    artists = artist
+    artist = self.new(artist_name)
+    artist
+  end 
+  
+  def self.create(name)
+    artist = self.new(name)
+    @@all << artist
+    artist
+  end
+    
+    
+     def add_album(name)
+  
 end 
+
+end 
+artist = Artist.new('John Mayer')
+artist.albums
+

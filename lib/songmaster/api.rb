@@ -7,8 +7,19 @@ class API
   def self.get_artist(artist)
     return RSpotify::Artist.search(artist).first
   end
+  
+  def self.find_artist(artist_name)
+    artists = RSpotify::Artist.search('artist_name')
+    artists
+  end 
+  
+  def self.get_albums(artist_name)
+    API.find_artist(artist_name)
+    albums = (artist_name).albums
+    albums.first.name
+  end 
 
-  def self.get_albums(rspotify_artist)
+  def self.get_albu(rspotify_artist)
     result = Array.new
     for album in rspotify_artist.albums
       result.push(album.name)

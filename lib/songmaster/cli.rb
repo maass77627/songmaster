@@ -3,25 +3,31 @@
 class Songmaster::CLI
   
   def call
-    list_songs 
-    choose  
+    puts "Welcome to songmaster! Your friendly music database!"
+    start
+    choose 
     goodbye
   end 
   
-  def list_songs 
-    puts "songs "
-    puts "Spotifys top 50 songs" 
-   
+  def start 
+    puts ""
+    puts "Enter the name of an artist you would like to see albums for, or type exit." 
+   input = gets.strip 
+   Artist.print_albums(input)
   end 
   
   def choose
-  
+   puts ""
+    puts "Which album would you like to see tracks from?"
+    input = gets.strip
+    Album.tracks(input)
         end 
         
         def goodbye 
-         puts "Thanks for checking out the top 50 spotify songs.
-          see you next time!"
+         puts "Thanks for checking out Songmaster!
+          See you next time!"
         end 
 
 
 end 
+

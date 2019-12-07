@@ -14,4 +14,8 @@ class Songmaster::Artist
     @@all
   end 
   
+  def self.create(name)
+    API.get_artist(name)
+  end 
+  
 end 
